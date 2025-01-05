@@ -19,6 +19,8 @@ export function Signup() {
       await axios.post(`http://localhost:3000/api/v1/signup`, {
         username,
         password,
+      },{
+        withCredentials: true 
       });
       navigator("/Signin")
     } catch (error:any) {
